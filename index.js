@@ -1,3 +1,5 @@
+// Code
+
 const card = document.querySelector(".debit-card");
 const frontPart = document.querySelector(".front");
 const backPart = document.querySelector(".back");

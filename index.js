@@ -1,4 +1,4 @@
-// Code
+// A K M Shabab Ibrahim
 
 const card = document.querySelector(".debit-card");
 const frontPart = document.querySelector(".front");

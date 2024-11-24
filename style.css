@@ -1,0 +1,246 @@
+*{
+    margin: 0px;
+    padding:0px;
+}
+
+.main-frame{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    perspective: 500px;
+}
+
+.debit-card{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    transform-style: preserve-3d;
+    transition: transform 0.4s linear;
+    top: 60px;
+
+}
+
+.front{
+    width: 300px;
+    height: 160px;
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(222, 13, 13);
+    border-radius: 10px;
+    /* backface-visibility: hidden; */
+    transition: z-index 0.4s linear, backface-visibility 0.4s linear;
+
+}
+
+.bank-name{
+    /* border: 2px solid black; */
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    left: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    top: 5px;
+}
+.card-number{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    position: relative;
+    top: 40px;
+    color: white;
+}
+.card-number span{
+    text-transform:uppercase;
+}
+.full-name{
+    /* border: 2px solid black; */
+    position: relative;
+    display: inline-block;
+    top:  60px;
+    left: 25px;
+    font-size: 11px;
+    color: white;
+    word-spacing: 3px;
+    font-weight: bold;
+}
+.expiry-date{
+    /* border: 2px solid black; */
+    position: absolute;
+    display: inline-block;
+    left: 215px;
+    top:  112px;
+    font-size: 11px;
+    color: white;
+    padding: 3px;
+    font-weight: bold;
+    
+}
+.back{
+    width: 300px;
+    height: 160px;
+    position:absolute;
+    background-color: rgb(222, 13, 13);
+    border-radius: 10px;
+    /* backface-visibility: hidden; */
+    /* transform: rotateY(45deg); */
+    z-index: 1;
+    transition: z-index 0.4s linear, backface-visibility 0.4s linear;
+
+}
+
+.back .cvv{
+    /* border: 2px solid black; */
+    position: relative;
+    display: inline-block;
+    width: 35px;
+    right: -100px;
+    top: 60px;
+    transform: scaleX(-1);
+    color: black;
+    background-color: white;
+    letter-spacing: 2px;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.back .line{
+    width: 296px;
+    height: 20px;
+    border: 2px solid black;
+    background-color: black;
+    position: relative;
+    top: 40px;
+
+}
+
+.info{
+    width: 400px;
+    height: 300px;
+    /* border: 2px solid black; */
+    border-radius: 20px;
+    position: absolute;
+    top: 200px;
+    z-index: -1;
+    background-color: rgba(255, 132, 132, 0.5);
+}
+
+.info .user-name{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 270px;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+    top: 40px;
+
+}
+
+
+.info .user-name input{
+    appearance: none;
+    width: 250px;
+    height: 30px;
+    outline: hidden;
+}
+
+.info .user-card-number{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 270px;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+    top: 60px;
+
+}
+
+.info .user-card-number input{
+    appearance: none;
+    width: 250px;
+    height: 30px;
+    outline: hidden;
+
+}
+
+.info .expiration-date{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 135px;
+    font-size: 14px;
+    position: relative;
+    left: 20px;
+    top: 100px;
+
+}
+.info .expiration-date input{
+    appearance: none;
+    width: 60px;
+    height: 30px;
+    outline: hidden;
+}
+.info .expiration-date #date{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.info .cvv-code{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    width: 65px;
+    font-size: 14px;
+    position: relative;
+    left: 300px;
+    top: 46px;
+
+
+}
+
+.info .cvv-code input{
+    appearance: none;
+    width: 50px;
+    height: 30px;
+    outline: hidden;
+}
+
+input{
+    padding-left: 5px;
+    border: 2px solid rgb(0, 0, 0);
+}
+input:focus{
+    outline:hidden !important; 
+    appearance: none !important;
+    box-shadow: none !important;
+    border: 3px solid rgb(255, 24, 24);
+}
+label{
+    font-weight: bold;
+}
+
